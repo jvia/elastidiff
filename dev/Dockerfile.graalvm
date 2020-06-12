@@ -1,0 +1,16 @@
+FROM oracle/graalvm-ce:20.1.0-java11-ol8
+MAINTAINER Jeremiah Via <jmv@gamayun.io>
+
+RUN gu install native-image
+
+WORKDIR /tmp/clojure
+RUN curl -O https://download.clojure.org/install/linux-install-1.10.1.536.sh && \
+    chmod +x linux-install-1.10.1.536.sh && \
+    ./linux-install-1.10.1.536.sh
+
+# Cache dependencies
+WORKDIR /app
+ADD deps.edn deps.edn
+RUN clojure -A:test:native-image -Stree
+
+CMD ['clojure']

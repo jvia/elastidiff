@@ -1,0 +1,33 @@
+{:paths ["resources" "src"]
+
+ :deps {org.clojure/clojure                       {:mvn/version "1.10.2-alpha1"}
+        org.clojure/core.async                    {:mvn/version "1.2.598"}
+        org.clojure/tools.cli                     {:mvn/version "1.0.194"}
+        cheshire                                  {:mvn/version "5.10.0"}
+        lambdaisland/deep-diff2                   {:mvn/version "2.0.0-93"}
+        lambdaisland/uri                          {:mvn/version "1.4.49"}
+        org.martinklepsch/clj-http-lite           {:mvn/version "0.4.3"}
+        io.github.java-diff-utils/java-diff-utils {:mvn/version "4.7"}}
+
+ :aliases
+ {:test {:extra-paths ["dev" "test"]
+         :extra-deps  {org.clojure/test.check {:mvn/version "0.10.0"}}}
+  :runner
+  {:extra-deps {com.cognitect/test-runner
+                {:git/url "https://github.com/cognitect-labs/test-runner"
+                 :sha     "76568540e7f40268ad2b646110f237a60295fa3c"}}
+   :main-opts  ["-m" "cognitect.test-runner"
+                "-d" "test"]}
+
+  :native-image {:main-opts  ["-m clj.native-image io.gamayun.elastidiff"
+                              "--no-server"
+                              "--enable-url-protocols=http,https"
+                              "--initialize-at-build-time"
+                              "-H:Name=elastidiff"
+                              ;; for debugging
+                              "-H:+ReportExceptionStackTraces"
+                              "--report-unsupported-elements-at-runtime"
+                              "--no-fallback"]
+                 :jvm-opts   ["-Dclojure.compiler.direct-linking=true"]
+                 :extra-deps {clj.native-image {:git/url "https://github.com/taylorwood/clj.native-image.git"
+                                                :sha     "7708e7fd4572459c81f6a6b8e44c96f41cdd92d4"}}}}}

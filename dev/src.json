@@ -1,0 +1,98 @@
+[
+    {
+        "genres": "Action",
+        "overview": "While racing to a boxing match, Frank, Mike, John and Rey get more than they bargained for. A wrong turn lands them directly in the path of Fallon, a vicious, wise-cracking drug lord. After accidentally witnessing Fallon murder a disloyal henchman, the four become his unwilling prey in a savage game of cat & mouse as they are mercilessly stalked through the urban jungle in this taut suspense drama",
+        "release_date": "1993-10-15",
+        "directors": "Stephen Hopkins",
+        "title": "Judgment Night",
+        "id": 6
+    },
+    {
+        "genres": "Adventure",
+        "overview": "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.",
+        "release_date": "1977-05-25",
+        "directors": "George Lucas",
+        "title": "Star Wars",
+        "id": 11
+    },
+    {
+        "genres": "Animation",
+        "overview": "Nemo, an adventurous young clownfish, is unexpectedly taken from his Great Barrier Reef home to a dentist's office aquarium. It's up to his worrisome father Marlin and a friendly but forgetful fish Dory to bring Nemo home -- meeting vegetarian sharks, surfer dude turtles, hypnotic jellyfish, hungry seagulls, and more along the way.",
+        "release_date": "2003-05-30",
+        "directors": "Andrew Stanton",
+        "title": "Finding Nemo",
+        "id": 12
+    },
+    {
+        "genres": "Comedy",
+        "overview": "A man with a low IQ has accomplished great things in his life and been present during significant historic events—in each case, far exceeding what anyone imagined he could do. But despite all he has achieved, his one true love eludes him.",
+        "release_date": "1994-07-06",
+        "directors": "Robert Zemeckis",
+        "title": "Forrest Gump",
+        "id": 13
+    },
+    {
+        "genres": "Drama",
+        "overview": "Lester Burnham, a depressed suburban father in a mid-life crisis, decides to turn his hectic life around after developing an infatuation with his daughter's attractive friend.",
+        "release_date": "1999-09-15",
+        "directors": "Sam Mendes",
+        "title": "American Beauty",
+        "id": 14
+    },
+    {
+        "genres": "Drama",
+        "overview": "Newspaper magnate, Charles Foster Kane is taken from his mother as a boy and made the ward of a rich industrialist. As a result, every well-meaning, tyrannical or self-destructive move he makes for the rest of his life appears in some way to be a reaction to that deeply wounding event.",
+        "release_date": "1941-05-06",
+        "directors": "Orson Welles",
+        "title": "Citizen Kane",
+        "id": 15
+    },
+    {
+        "genres": "Crime",
+        "overview": "Selma, a Czech immigrant on the verge of blindness, struggles to make ends meet for herself and her son, who has inherited the same genetic disorder and will suffer the same fate without an expensive operation. When life gets too difficult, Selma learns to cope through her love of musicals, escaping life's troubles - even if just for a moment - by dreaming up little numbers to the rhythmic beats of her surroundings.",
+        "release_date": "2000-05-17",
+        "directors": "Lars von Trier",
+        "title": "Dancer in the Dark",
+        "id": 16
+    },
+    {
+        "genres": "Adventure",
+        "overview": "In 2257, a taxi driver is unintentionally given the task of saving a young girl who is part of the key that will ensure the survival of humanity.",
+        "release_date": "1997-05-02",
+        "directors": "Luc Besson",
+        "title": "The Fifth Element",
+        "id": 18
+    },
+    {
+        "genres": "Drama",
+        "overview": "A fatally ill mother with only two months to live creates a list of things she wants to do before she dies without telling her family of her illness.",
+        "release_date": "2003-03-07",
+        "directors": "Isabel Coixet",
+        "title": "My Life Without Me",
+        "id": 20
+    },
+    {
+        "genres": "Documentary",
+        "overview": "Bruce Brown's The Endless Summer is one of the first and most influential surf movies of all time. The film documents American surfers Mike Hynson and Robert August as they travel the world during California’s winter (which, back in 1965 was off-season for surfing) in search of the perfect wave and ultimately, an endless summer.",
+        "release_date": "1966-06-15",
+        "directors": "Bruce Brown",
+        "title": "The Endless Summer",
+        "id": 21
+    },
+    {
+        "genres": "Adventure",
+        "overview": "Jack Sparrow, a freewheeling 18th-century pirate, quarrels with a rival pirate bent on pillaging Port Royal. When the governor's daughter is kidnapped, Sparrow decides to help the girl's love save her.",
+        "release_date": "2003-07-09",
+        "directors": "Gore Verbinski",
+        "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+        "id": 22
+    },
+    {
+        "genres": "Crime",
+        "overview": "An assassin is shot by her ruthless employer, Bill, and other members of their assassination circle – but she lives to plot her vengeance.",
+        "release_date": "2003-10-10",
+        "directors": "Quentin Tarantino",
+        "title": "Kill Bill: Vol. 1",
+        "id": 24
+    }
+]

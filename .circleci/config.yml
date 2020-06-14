@@ -41,19 +41,16 @@ jobs:
               curl -O -sL https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-20.1.0/graalvm-ce-java11-linux-amd64-20.1.0.tar.gz
               tar xzf graalvm-ce-java11-linux-amd64-20.1.0.tar.gz
             fi
-            pwd
-            ls
-            ls /home/circleci/graalvm-ce-java11-20.1.0
+            ls $GRAALVM_HOME/bin
 
-
-      - save_cache:
-          paths:
-            - ~/.m2
-          key: v1-dependencies-{{ checksum "deps.edn" }}
-
-      # run tests!
       - run: clojure -A:test:runner
 
       - run:
           name: Build binary
           command: clojure --report stderr -A:native-image
+
+      - save_cache:
+          paths:
+            - ~/.m2
+            - ~/graalvm-ce-java11-20.1.0
+          key: v1-dependencies-{{ checksum "deps.edn" }}

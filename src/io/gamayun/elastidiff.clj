@@ -239,7 +239,9 @@
     :assoc-fn accm-in-src]
    ;; dst
    [nil "--dst-sort SORT" "How to sort the source index."
-    :id :sort, :assoc-fn accm-in-dst]
+    :id :sort
+    :default-desc "_id"
+    :assoc-fn accm-in-dst]
    [nil "--dst-filter FITLER" "A filter to constrain the result set."
     :id :filter
     :assoc-fn accm-in-dst

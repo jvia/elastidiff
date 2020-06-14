@@ -34,7 +34,7 @@ docker/build-image:
 install: target/elastidiff-macos-amd64
 	cp target/elastidiff-macos-amd64 /usr/local/bin/elastidiff
 
-build: target/elastidiff-macos-amd64 target/elastidiff-linux-amd64
+build: target/elastidiff-macos-amd64.zip target/elastidiff-linux-amd64.zip
 	@echo Artifacts in target/
 
 # mac

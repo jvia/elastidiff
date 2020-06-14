@@ -23,6 +23,17 @@ jobs:
       - run: clojure -Stree -A:test:runner:native-images
 
       - run:
+          name: Install lsof
+          command: |
+            sudo apt-get install lsof
+
+      - run:
+          name: Install native dev tools
+          command: |
+            sudo apt-get update
+            sudo apt-get -y install gcc g++ zlib1g-dev
+
+      - run:
           name: Download GraalVM
           command: |
             cd ~
@@ -41,4 +52,4 @@ jobs:
 
       - run:
           name: Build binary
-          command: clojure -A:native-image
+          command: clojure --report stderr -A:native-image

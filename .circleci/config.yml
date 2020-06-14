@@ -22,7 +22,7 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-            
 
-      - run: clojure -Stree
+      - run: clojure -Stree -A:test:runner:native-images
 
       - save_cache:
           paths:

@@ -165,7 +165,7 @@
           ;; the same
           (and (= order 0) (= source-a source-b))
           (do (when print-same?
-                (println "Same:" id-a))
+                (println "Same:   " id-a))
               (recur (<! ch-a) (<! ch-b)))
 
           ;; looking at the same document on both indexes but they are different
@@ -185,7 +185,7 @@
           ;; document is missing from index a
           (> order 0)
           (do (when print-added?
-                (println "Added:" id-b))
+                (println "Added:  " id-b))
               (recur hit-a (<! ch-b))))))
 
     done))

@@ -148,7 +148,7 @@
     [false false] 0))
 
 (defn differ
-  [ch-a ch-b {:keys [print-diff print-changed? print-added? print-deleted? print-unchanged?]}]
+  [ch-a ch-b {:keys [print-diff print-changed? print-added? print-deleted? print-same?]}]
   (let [done (async/chan)]
     (async/go-loop [hit-a (<! ch-a), hit-b (<! ch-b)]
       (let [{id-a :_id, source-a :_source} hit-a
@@ -164,7 +164,7 @@
           ;; looking at the same document on both indexes and they are
           ;; the same
           (and (= order 0) (= source-a source-b))
-          (do (when print-unchanged?
+          (do (when print-same?
                 (println "Same:" id-a))
               (recur (<! ch-a) (<! ch-b)))
 
@@ -209,8 +209,8 @@
     :default true, :id :print-added?]
    ["-d" "--[no-]print-deleted" "Control printing when documents are missing from dst but exit in src."
     :default true, :id :print-deleted?]
-   ["-u" "--[no-]print-unchanged" "Control printing when documents are the same."
-    :default false, :id :print-unchanged?]
+   ["-u" "--[no-]print-same" "Control printing when documents are the same."
+    :default false, :id :print-same?]
    [nil  "--size SIZE" "How many documents to fetch from Elasticsearch in a single request."
     :default 100]
    [nil  "--scroll-time SCROLL" "The duration to keep the scroll context open."

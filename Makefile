@@ -44,8 +44,9 @@ target/elastidiff-macos-amd64: $(SOURCES)
 	mv elastidiff target/elastidiff-macos-amd64
 
 target/elastidiff-macos-amd64.zip: target/elastidiff-macos-amd64
-	zip target/elastidiff-macos-amd64.zip target/elastidiff-macos-amd64
-	sha256sum target/elastidiff-macos-amd64.zip > target/elastidiff-macos-amd64.sha256
+	cd target && \
+	zip elastidiff-macos-amd64.zip elastidiff-macos-amd64 && \
+	sha256sum elastidiff-macos-amd64.zip > elastidiff-macos-amd64.sha256
 
 # linux
 target/elastidiff-linux-amd64: $(SOURCES)
@@ -54,5 +55,6 @@ target/elastidiff-linux-amd64: $(SOURCES)
 	mv elastidiff target/elastidiff-linux-amd64
 
 target/elastidiff-linux-amd64.zip: target/elastidiff-linux-amd64
-	zip target/elastidiff-linux-amd64.zip target/elastidiff-linux-amd64
-	sha256sum target/elastidiff-linux-amd64.zip > target/elastidiff-linux-amd64.sha256
+	cd target && \
+	zip elastidiff-linux-amd64.zip elastidiff-linux-amd64 && \
+	sha256sum elastidiff-linux-amd64.zip > elastidiff-linux-amd64.sha256

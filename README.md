@@ -15,6 +15,8 @@ $ brew install elastidiff
 $ elastidiff localhost:9200/src localhost:9200/dst | colordiff
 ```
 
+Outputs:
+
 ``` diff
 Changed: 13
 --- src

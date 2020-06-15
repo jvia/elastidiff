@@ -148,7 +148,7 @@
     [false false] 0))
 
 (defn differ
-  [ch-a ch-b {:keys [print-diff print-changed? print-added? print-deleted? print-same?]}]
+  [ch-a ch-b {:keys [print-diff print-diff? print-changed? print-added? print-deleted? print-same?]}]
   (let [done (async/chan)]
     (async/go-loop [hit-a (<! ch-a), hit-b (<! ch-b)]
       (let [{id-a :_id, source-a :_source} hit-a
@@ -172,7 +172,8 @@
           (and (= order 0) (not= source-a source-b))
           (do (when print-changed?
                 (println "Changed:" id-a)
-                (print-diff source-a source-b))
+                (when print-diff?
+                  (print-diff source-a source-b)))
               (recur (<! ch-a) (<! ch-b)))
 
           ;; document is missing from index b
@@ -211,6 +212,8 @@
     :default true, :id :print-deleted?]
    ["-u" "--[no-]print-same" "Control printing when documents are the same."
     :default false, :id :print-same?]
+   [nil "--[no-]print-diff" "Control print diffs for chaned documents."
+    :default true, :id :print-diff?]
    [nil  "--size SIZE" "How many documents to fetch from Elasticsearch in a single request."
     :default 100]
    [nil  "--scroll-time SCROLL" "The duration to keep the scroll context open."
